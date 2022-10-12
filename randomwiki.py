@@ -15,8 +15,8 @@ def go_to_page():
     p = str(d.group(1)).replace(' - Wikipedia','')
     webbrowser.open_new_tab('https://wikipedia.org/wiki/' + p)
 
+print(get_page())
 while True:
-    print(get_page())
     r = str(input('Visit article? [Y/N]'))[0]
     if r not in 'YyNnSs01':
         while r not in 'YyNnSs01':
@@ -25,3 +25,4 @@ while True:
         print(get_page())
     if r in 'YySs1':
         go_to_page()
+        print(get_page())
